@@ -1,0 +1,11 @@
+$neutralDark: #010101;
+$neutralLight: #f0f8ff;
+$primaryAccentColor: #986dfb;
+$secondaryAccentColor: #14d9b2;
+
+:export {
+  neutralDark: $neutralDark;
+  neutralLight: $neutralLight;
+  primaryAccentColor: $primaryAccentColor;
+  secondaryAccentColor: $secondaryAccentColor;
+}
