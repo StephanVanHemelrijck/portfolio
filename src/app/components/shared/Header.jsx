@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../logo";
-import Button from "../button";
+import Button from "./button";
 
 const Header = () => {
   return (

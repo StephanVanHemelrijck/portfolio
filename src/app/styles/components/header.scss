@@ -1,10 +1,13 @@
 .headerWrapper {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+
   position: fixed;
   top: $outerMargin;
   left: $outerMargin;
   right: $outerMargin;
+
+  .logo {
+    min-width: 260px;
+  }
 }
