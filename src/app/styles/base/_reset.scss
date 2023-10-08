@@ -6,7 +6,20 @@
   box-sizing: border-box;
 }
 
-body,
 html {
+  height: calc(100vh - $outerMargin * 2);
+  width: calc(100vw - $outerMargin * 2);
+  margin: $outerMargin;
+}
+
+body {
+  box-sizing: border-box;
   height: 100%;
+  width: 100%;
+  background-color: $neutralDark;
+  color: $neutralLight;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

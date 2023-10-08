@@ -1,0 +1,13 @@
+.titleScreen {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem 0;
+
+  h1 {
+    font-size: 52px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+}

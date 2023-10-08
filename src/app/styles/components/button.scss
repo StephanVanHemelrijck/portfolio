@@ -1,0 +1,23 @@
+button {
+  color: $neutralLight;
+  background-color: transparent;
+  border: 1px solid $neutralLight;
+  width: 125px;
+  height: auto;
+  border-width: 2px;
+  border-radius: 5px;
+
+  a:hover {
+    background-color: $neutralLight;
+    color: $neutralDark;
+    cursor: pointer;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: $neutralLight;
+    font-size: $defaultFontSize;
+    padding: 10px 30px;
+  }
+}
