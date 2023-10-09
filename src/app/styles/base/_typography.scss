@@ -12,6 +12,14 @@ h6 {
   font-weight: $mediumWeight;
 }
 
+h1 {
+  font-size: $defaultFontSize * 3 - 2px; // 52px
+}
+
+h2 {
+  font-size: $defaultFontSize * 2 - 4px; // 32px
+}
+
 a {
   text-decoration: none;
   color: $primaryAccentColor;

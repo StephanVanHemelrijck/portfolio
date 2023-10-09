@@ -1,12 +1,12 @@
 import React from "react";
 import Logo from "../logo";
-import Button from "./button";
+import Button from "./Button";
 
 const Header = () => {
   return (
     <div className="headerWrapper">
       <Logo />
-      <Button />
+      <Button value={"Contact"} href={"/"} />
     </div>
   );
 };

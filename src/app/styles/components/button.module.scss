@@ -1,4 +1,6 @@
-button {
+@import "../variables.scss";
+
+.button {
   color: $neutralLight;
   background-color: transparent;
   border: 1px solid $neutralLight;
@@ -7,13 +9,15 @@ button {
   border-width: 2px;
   border-radius: 5px;
 
-  a:hover {
+  a:hover,
+  p:hover {
     background-color: $neutralLight;
     color: $neutralDark;
     cursor: pointer;
   }
 
-  a {
+  a,
+  p {
     display: block;
     text-decoration: none;
     color: $neutralLight;
