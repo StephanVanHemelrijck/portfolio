@@ -1,4 +1,6 @@
-span:hover {
+@import "../partials/variables";
+
+.titleSpan:hover {
   color: $secondaryAccentColor;
   cursor: pointer;
 }

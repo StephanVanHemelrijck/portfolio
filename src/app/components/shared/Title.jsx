@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import styles from "../../styles/components/title.module.scss";
 
 const Title = ({ text }) => {
   const [textArray, setTextArray] = useState([]);
@@ -14,7 +15,7 @@ const Title = ({ text }) => {
     <>
       {textArray.map((letter, index) => {
         return (
-          <span className="titleSpan" key={index}>
+          <span className={styles.titleSpan} key={index}>
             {letter}
           </span>
         );

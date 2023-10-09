@@ -1,10 +1,5 @@
-@import "variables";
 @import "mixins";
+@import "partials/variables";
 @import "base/reset";
 @import "base/typography";
-@import "components/logo.scss";
-@import "components/header.scss";
-@import "components/title.scss";
 @import "pages/home.scss";
-@import "components/sidebarNavigation.scss";
-@import "components/footer.scss";
