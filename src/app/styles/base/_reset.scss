@@ -7,6 +7,12 @@
 }
 
 html {
+  height: 100%;
+  width: 100%;
+  box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.5);
+}
+
+.marginWrapper {
   height: calc(100vh - $outerMargin * 2);
   width: calc(100vw - $outerMargin * 2);
   margin: $outerMargin;

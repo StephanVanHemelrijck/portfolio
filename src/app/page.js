@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import UnderConstruction from "./components/UnderConstruction";
 
 const Home = () => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const closeModal = () => {
     setIsModalOpen(false);

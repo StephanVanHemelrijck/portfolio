@@ -1,0 +1,46 @@
+@import "../partials/variables";
+
+$navItemHeight: 70px;
+
+.navigation {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 40px;
+
+  ul {
+    list-style: none;
+
+    li {
+      width: 125px;
+      height: $navItemHeight;
+      border-right: 1px solid rgba($neutralLight, 0.5);
+      position: relative;
+
+      p {
+        color: $neutralLight;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          color: $primaryAccentColor;
+        }
+      }
+
+      .navigationLine {
+        width: 3px;
+        height: $navItemHeight;
+        background-color: $primaryAccentColor;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 50px;
+        transform: translateX(1.5px);
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+}

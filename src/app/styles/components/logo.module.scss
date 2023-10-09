@@ -1,0 +1,9 @@
+@import "../partials/variables";
+
+.logo {
+  display: block;
+  width: fit-content;
+  font-style: italic;
+  font-weight: $mediumWeight;
+  font-size: $defaultFontSize * 2 - 4px;
+}
