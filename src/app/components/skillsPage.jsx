@@ -31,7 +31,7 @@ const SkillsPage = () => {
       color: "#563d7c",
     },
     {
-      name: "Nodejs",
+      name: "NodeJs",
       icon: "FaNodeJs",
       color: "#3C873A",
     },
@@ -68,7 +68,7 @@ const SkillsPage = () => {
   ];
 
   return (
-    <div className={styles.skillsPage}>
+    <div className={styles.skillsPage} id="skills">
       <>
         {/* TODO: prompt to chat gpt to make a new quote */}
         <p className={styles.prompt}>

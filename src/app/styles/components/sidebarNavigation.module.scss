@@ -17,7 +17,8 @@ $navItemHeight: 70px;
       border-right: 1px solid rgba($neutralLight, 0.5);
       position: relative;
 
-      p {
+      p,
+      a {
         color: $neutralLight;
         width: 100%;
         height: 100%;
@@ -26,6 +27,7 @@ $navItemHeight: 70px;
         align-items: center;
 
         &:hover {
+          cursor: pointer;
           color: $primaryAccentColor;
         }
       }

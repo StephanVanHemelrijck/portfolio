@@ -4,7 +4,7 @@ import styles from "../styles/pages/introPage.module.scss";
 
 const IntroPage = () => {
   return (
-    <div className={styles.titleScreen}>
+    <div className={styles.titleScreen} id="intro">
       <h1>
         <Title text="Hi, I'm Stephan Van Hemelrijck" />
       </h1>
