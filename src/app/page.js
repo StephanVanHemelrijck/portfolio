@@ -8,6 +8,7 @@ import SkillsPage from "./components/skillsPage";
 import styles from "./styles/pages/page.module.scss";
 import SidebarNavigation from "./components/shared/SidebarNavigation";
 import ContactPage from "./components/contactPage";
+import ProjectPage from "./components/projectPage";
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -54,6 +55,7 @@ const Home = () => {
       <article className={styles.scroller}>
         <IntroPage />
         <SkillsPage />
+        <ProjectPage />
         <ContactPage />
       </article>
       <SidebarNavigation selected={currentSection} />

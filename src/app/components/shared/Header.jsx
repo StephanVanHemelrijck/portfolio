@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className={styles.headerWrapper}>
       <Logo />
-      <Button value={"Contact"} href={"/"} />
+      <Button value={"Contact"} href={"#contact"} />
     </div>
   );
 };

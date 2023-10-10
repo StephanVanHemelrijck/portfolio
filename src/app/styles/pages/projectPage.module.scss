@@ -1,0 +1,110 @@
+@import "../partials/variables";
+
+.text {
+  width: 50%;
+  text-align: center;
+}
+
+.projectPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: start !important;
+  width: 100vw !important;
+}
+
+.redirect {
+  font-size: $defaultFontSize - 4px;
+  font-weight: $lightWeight;
+
+  span {
+    position: relative;
+  }
+}
+
+.scrollContent {
+  width: 200vw;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+
+  // hide scrollbar
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.scrollItem {
+  width: 100vw;
+  margin-left: $outerMargin;
+  margin-right: $outerMargin;
+}
+
+.scrollItem:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.scrollItem:nth-child(2) {
+  display: flex;
+  align-items: center;
+
+  .information {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .imageContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title {
+    margin: 0;
+  }
+
+  .text {
+    width: 60%;
+    text-align: left;
+  }
+
+  .listTitle {
+    opacity: 0.75;
+    font-size: $defaultFontSize - 2px;
+    font-weight: $lightWeight;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: $secondaryAccentColor;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+
+  ul > li {
+    width: fit-content;
+
+    svg {
+      font-size: 32px !important;
+    }
+
+    p {
+      display: none;
+    }
+  }
+
+  .buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+  }
+}
