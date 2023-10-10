@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../../styles/components/footer.module.scss";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-const Footer = () => {
+const Footer = ({ scrollDirection }) => {
   return (
     <div className={styles.footer}>
       <div className={styles.socials}>
@@ -18,8 +18,12 @@ const Footer = () => {
         </a>
       </div>
       <div className={styles.scrollDown}>
-        <span className={styles.scrollText}>Scroll Down</span>
-        <span className={styles.scrollArrow}>&gt;</span>
+        <span className={styles.scrollText}>Scroll {scrollDirection}</span>
+        {scrollDirection === "down" ? (
+          <span className={styles.scrollArrowDown}>&gt;</span>
+        ) : (
+          <span className={styles.scrollArrowUp}>&lt;</span>
+        )}
       </div>
     </div>
   );

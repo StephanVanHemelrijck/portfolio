@@ -48,11 +48,21 @@
   top: $outerMargin - 25px;
 }
 
-.scrollArrow {
+.scrollArrowDown {
   transform: rotate(90deg);
   opacity: 0.75;
   position: relative;
   top: $outerMargin + 25px;
+  width: 24px;
+  height: 24px;
+}
+
+.scrollArrowUp {
+  transform: rotate(90deg);
+  opacity: 0.75;
+  position: relative;
+  top: $outerMargin - 65px;
+  left: 3px;
   width: 24px;
   height: 24px;
 }
