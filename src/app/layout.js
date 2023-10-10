@@ -18,8 +18,8 @@ export default function RootLayout({ children }) {
         <div className="marginWrapper">
           <Header />
           <SidebarNavigation />
-          {children}
           <Footer />
+          {children}
         </div>
       </body>
     </html>

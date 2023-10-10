@@ -1,0 +1,21 @@
+@import "../partials/variables";
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  .icon {
+    font-size: 52px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .name {
+    // opacity: 0.5;
+    font-size: 16px;
+    font-weight: $mediumWeight;
+  }
+}

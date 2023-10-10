@@ -1,0 +1,26 @@
+@import "../partials/variables";
+
+.skillsPage {
+  height: calc(100vh - $outerMargin * 2);
+  width: calc(100vw - $outerMargin * 2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  .prompt {
+    margin-top: 2rem;
+  }
+}
+
+.skillsList {
+  ul {
+    margin-top: 2rem;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+}

@@ -12,12 +12,12 @@
 
 .socials {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   gap: 1rem;
 
   svg {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     color: $neutralLight;
 
     &:hover {
