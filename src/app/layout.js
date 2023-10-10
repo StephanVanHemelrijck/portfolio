@@ -17,7 +17,6 @@ export default function RootLayout({ children }) {
       <body className={nunito.className}>
         <div className="marginWrapper">
           <Header />
-          <SidebarNavigation />
           <Footer />
           {children}
         </div>

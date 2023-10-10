@@ -2,13 +2,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../../styles/components/sidebarNavigation.module.scss";
 
-const SidebarNavigation = () => {
-  const [selected, setSelected] = useState("intro");
-
-  const handleChangeSelected = (value) => {
-    setSelected(value);
-  };
-
+const SidebarNavigation = ({ selected }) => {
   return (
     <section className={styles.navigation}>
       <ul>

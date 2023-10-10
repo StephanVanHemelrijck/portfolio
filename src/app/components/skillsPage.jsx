@@ -68,7 +68,7 @@ const SkillsPage = () => {
   ];
 
   return (
-    <div className={styles.skillsPage} id="skills">
+    <section className={styles.skillsPage} id="skills">
       <>
         {/* TODO: prompt to chat gpt to make a new quote */}
         <p className={styles.prompt}>
@@ -92,7 +92,7 @@ const SkillsPage = () => {
           </ul>
         </div>
       </>
-    </div>
+    </section>
   );
 };
 
