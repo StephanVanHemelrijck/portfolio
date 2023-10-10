@@ -7,33 +7,25 @@ const SidebarNavigation = ({ selected }) => {
     <section className={styles.navigation}>
       <ul>
         <li>
-          <a href="#intro" onClick={() => handleChangeSelected("intro")}>
-            Intro
-          </a>
+          <a href="#intro">Intro</a>
           {selected === "intro" && (
             <div className={styles.navigationLine}></div>
           )}
         </li>
         <li>
-          <a href="#skills" onClick={() => handleChangeSelected("skills")}>
-            Skills
-          </a>
+          <a href="#skills">Skills</a>
           {selected === "skills" && (
             <div className={styles.navigationLine}></div>
           )}
         </li>
         <li>
-          <a href="#projects" onClick={() => handleChangeSelected("projects")}>
-            Projects
-          </a>
+          <a href="#projects">Projects</a>
           {selected === "projects" && (
             <div className={styles.navigationLine}></div>
           )}
         </li>
         <li>
-          <a href="#contact" onClick={() => handleChangeSelected("contact")}>
-            Contact
-          </a>
+          <a href="#contact">Contact</a>
           {selected === "contact" && (
             <div className={styles.navigationLine}></div>
           )}

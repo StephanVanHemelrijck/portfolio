@@ -1,3 +1,5 @@
+@import "../partials/variables";
+
 .scroller {
   height: 100vh;
   overflow-y: scroll;
@@ -6,7 +8,17 @@
   &::-webkit-scrollbar {
     display: none;
   }
+
   section {
     scroll-snap-align: start;
+    height: calc(100vh - $outerMargin * 2);
+    width: calc(100vw - $outerMargin * 2);
+    height: calc(100vh - $outerMargin * 2);
+    width: calc(100vw - $outerMargin * 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
 }

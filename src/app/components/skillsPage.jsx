@@ -74,7 +74,7 @@ const SkillsPage = () => {
         <p className={styles.prompt}>
           NOT SOLVING A PROBLEM IS AN OPPORTUNITY MISSED
         </p>
-        <h1>
+        <h1 className={styles.title}>
           <Title text="Skills & Experience" />
         </h1>
         <div className={styles.skillsList}>
