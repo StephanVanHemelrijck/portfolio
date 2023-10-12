@@ -31,3 +31,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (max-width: $mediaMobile) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .marginWrapper {
+    margin: $outerMargin / 2;
+  }
+}

@@ -13,3 +13,20 @@
     min-width: 260px;
   }
 }
+
+@media screen and (max-width: $mediaMobile) {
+  .headerWrapper {
+    position: fixed;
+    top: $outerMargin / 2;
+    left: $outerMargin / 2;
+    right: $outerMargin / 2;
+  }
+
+  .logo {
+    min-width: 130px;
+  }
+
+  .button {
+    color: red;
+  }
+}

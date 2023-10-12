@@ -154,3 +154,71 @@
     }
   }
 }
+
+@media screen and (max-width: $mediaMobile) {
+  .scrollItem {
+    align-items: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .previousProjects {
+    width: auto;
+    margin-left: $outerMargin / 2;
+    margin-right: $outerMargin / 2;
+  }
+
+  .text {
+    width: 100%;
+    text-align: start;
+    font-size: $defaultFontSize - 2px;
+    line-height: 1.5rem;
+  }
+
+  .title {
+    font-size: 32px;
+    text-align: start;
+  }
+
+  .projectInformation {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .myProjects {
+    flex-direction: column;
+    width: 100%;
+
+    .information {
+      width: auto;
+      margin-left: $outerMargin / 2;
+      margin-right: $outerMargin / 2;
+    }
+
+    .imageContainer {
+      width: 100%;
+      justify-content: center;
+
+      .imageWrapper {
+        width: 100%;
+        border: none;
+      }
+    }
+
+    .text {
+      width: 100%;
+    }
+
+    .buttons {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .projectsNavigation {
+      width: auto;
+      margin-left: $outerMargin / 2;
+      margin-right: $outerMargin / 2;
+    }
+  }
+}

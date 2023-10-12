@@ -27,8 +27,8 @@ const ProjectPage = () => {
     <section className={styles.projectPage} id="projects">
       <div className={styles.scrollContent}>
         {content === "previous-projects" && (
-          <div className={styles.scrollItem}>
-            <h1>
+          <div className={`${styles.scrollItem} ${styles.previousProjects}`}>
+            <h1 className={styles.title}>
               <Title text="Previous Projects" />
             </h1>
             <p className={styles.text}>

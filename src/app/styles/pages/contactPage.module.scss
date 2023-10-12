@@ -14,3 +14,19 @@
     font-weight: $lightWeight;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .contactWrapper {
+    width: auto;
+    margin-left: $outerMargin / 2;
+    margin-right: $outerMargin / 2;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .text {
+    font-size: $defaultFontSize - 2px;
+  }
+}

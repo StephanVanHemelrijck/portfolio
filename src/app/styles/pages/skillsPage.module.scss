@@ -18,3 +18,24 @@
     row-gap: 2rem;
   }
 }
+
+@media screen and (max-width: $mediaMobile) {
+  .title,
+  .prompt {
+    text-align: center;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .prompt {
+    font-size: $defaultFontSize - 2px;
+  }
+
+  .skillsList {
+    ul {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

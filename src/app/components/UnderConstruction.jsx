@@ -12,7 +12,8 @@ const UnderConstruction = ({ onClose }) => {
         <h2>Under Construction</h2>
         <p>
           My portfolio is a work in progress, some data may not be entirely
-          accurate at this early stage. Thanks for your patience!
+          accurate at this early stage.
+          <br /> <br /> Thanks for your patience!
         </p>
         <Button listener={"click"} action={onClose} value={"Close"} />
       </div>

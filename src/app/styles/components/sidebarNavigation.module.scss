@@ -46,3 +46,9 @@ $navItemHeight: 70px;
     }
   }
 }
+
+@media screen and (max-width: $mediaMobile) {
+  .navigation {
+    display: none;
+  }
+}

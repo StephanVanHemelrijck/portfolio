@@ -25,3 +25,18 @@
     padding: 10px 30px;
   }
 }
+
+@media screen and (max-width: $mediaMobile) {
+  .button {
+    width: 100px;
+    height: auto;
+    border-width: 1px;
+    border-radius: 5px;
+
+    a,
+    p {
+      font-size: $defaultFontSize - 2px;
+      padding: 5px 15px;
+    }
+  }
+}

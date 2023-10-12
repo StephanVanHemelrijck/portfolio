@@ -10,3 +10,9 @@
     color: $secondaryAccentColor;
   }
 }
+
+@media screen and (max-width: $mediaMobile) {
+  .logo {
+    font-size: $defaultFontSize * 2 - 6px;
+  }
+}

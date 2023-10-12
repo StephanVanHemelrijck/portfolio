@@ -22,3 +22,12 @@
     gap: 1rem;
   }
 }
+
+@media screen and (max-width: $mediaMobile) {
+  .scroller {
+    section {
+      height: calc(100vh);
+      width: calc(100vw);
+    }
+  }
+}
