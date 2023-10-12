@@ -11,9 +11,9 @@ import ContactPage from "./components/contactPage";
 import ProjectPage from "./components/projectPage";
 
 const Home = () => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
-  const containerRef = useRef(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentSection, setCurrentSection] = useState("intro");
+  const containerRef = useRef(null);
 
   const closeModal = () => {
     setIsModalOpen(false);

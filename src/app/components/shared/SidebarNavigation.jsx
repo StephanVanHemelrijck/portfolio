@@ -7,6 +7,9 @@ const SidebarNavigation = ({ selected }) => {
   const [scrollDirection, setScrollDirection] = useState("down");
 
   useEffect(() => {
+    // store in session storage
+    sessionStorage.setItem("selected", selected);
+
     if (selected === "contact") setScrollDirection("up");
     else setScrollDirection("down");
   }, [selected]);
