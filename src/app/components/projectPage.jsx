@@ -5,6 +5,7 @@ import Title from "./shared/Title";
 import { useRef } from "react";
 import Skill from "./Skill";
 import Button from "./shared/Button";
+import Image from "next/image";
 
 const ProjectPage = () => {
   const spanRef = useRef(null);
@@ -39,17 +40,18 @@ const ProjectPage = () => {
             See Projects <span ref={spanRef}>&gt;</span>
           </a>
         </div>
+
         <div className={styles.scrollItem} id="myprojects">
           <div className={styles.information}>
             <p className={styles.category}>Web Application</p>
 
             <h1 className={styles.title}>
-              <Title text="RouteExplorer" />
+              <Title text="Final Show Showcase" />
             </h1>
 
             <p className={styles.text}>
-              A school project for my 2nd year of my degree. It is a website
-              that lets you create cycling routes.
+              A web application that allows students of Erasmushogeschool
+              Brussels to showcase their final work.
             </p>
 
             <p className={styles.listTitle}>Built with:</p>
@@ -70,17 +72,27 @@ const ProjectPage = () => {
               <Button
                 value="Demo"
                 externalRedirect={true}
-                href={"https://github.com/StephanVanHemelrijck"}
+                href={"https://multimedia.brussels"}
               />
               <Button
                 value="Code"
                 externalRedirect={true}
-                href={"https://github.com/StephanVanHemelrijck"}
+                href={"https://github.com/ehb-MCT/fp4-showcase"}
               />
             </div>
           </div>
           <div className={styles.imageContainer}>
-            <img src="/images/routeexplorer.png" alt="RouteExplorer" />
+            <div className={styles.imageWrapper}>
+              <Image
+                src="/images/finalwork-showcase.png"
+                layout="responsive"
+                width={200}
+                height={100}
+                alt="showcase"
+                loading="lazy"
+                quality={100}
+              />
+            </div>
           </div>
         </div>
       </div>
