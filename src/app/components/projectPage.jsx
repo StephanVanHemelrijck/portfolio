@@ -18,11 +18,6 @@ const ProjectPage = () => {
     }
   };
 
-  useEffect(() => {
-    if (sessionStorage.getItem("selected") !== "projects")
-      setContent("previous-projects");
-  }, [sessionStorage.getItem("selected")]);
-
   return (
     <section className={styles.projectPage} id="projects">
       <div className={styles.scrollContent}>
