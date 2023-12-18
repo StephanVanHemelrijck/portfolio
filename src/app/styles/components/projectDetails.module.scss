@@ -1,0 +1,119 @@
+@import "../partials/variables";
+
+.scrollItem {
+  width: 100vw;
+  margin-left: $outerMargin;
+  margin-right: $outerMargin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.projectInformation {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.myProjects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  .information {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+
+  .imageContainer {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .imageWrapper {
+      width: 80%;
+      border: 2px solid $secondaryAccentColor;
+      border-radius: 5px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .title {
+    margin: 0;
+  }
+
+  .text {
+    width: 60%;
+    text-align: left;
+  }
+
+  .listTitle {
+    opacity: 0.75;
+    font-size: $defaultFontSize - 2px;
+    font-weight: $lightWeight;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: $secondaryAccentColor;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+
+  ul > li {
+    width: fit-content;
+
+    svg {
+      font-size: 32px !important;
+    }
+
+    p {
+      display: none;
+    }
+  }
+
+  .buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.projectsNavigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  margin-top: 1rem;
+
+  div {
+    font-size: $defaultFontSize * 3 !important;
+    font-weight: $mediumWeight !important;
+
+    &:hover {
+      cursor: pointer;
+      color: $primaryAccentColor;
+    }
+  }
+
+  div:nth-child(2) {
+    opacity: 0.5;
+
+    &:hover {
+      cursor: not-allowed;
+      color: $neutralLight;
+    }
+  }
+}

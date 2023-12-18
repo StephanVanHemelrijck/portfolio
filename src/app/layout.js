@@ -1,6 +1,4 @@
 import Header from "./components/shared/Header";
-import SidebarNavigation from "./components/shared/SidebarNavigation";
-import Footer from "./components/shared/Footer";
 import "./styles/main.scss";
 import { Nunito } from "next/font/google";
 
