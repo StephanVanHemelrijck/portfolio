@@ -11,8 +11,9 @@ const UnderConstruction = ({ onClose }) => {
         </div>
         <h2>Under Construction</h2>
         <p>
-          My portfolio is a work in progress, some data may not be entirely
-          accurate at this early stage.
+          Just a heads up that the scroll wheel experience is still under
+          construction. <br /> <br /> You can still navigate through the page
+          using either the navigation bar or the arrow keys.
           <br /> <br /> Thanks for your patience!
         </p>
         <Button listener={"click"} action={onClose} value={"Close"} />

@@ -6,7 +6,16 @@ import Skill from "../Skill";
 import Button from "./Button";
 import Image from "next/image";
 
-const ProjectDetails = ({ setContent, project }) => {
+const ProjectDetails = ({
+  project,
+  handleProjectNavigation,
+  totalProjects,
+  index,
+}) => {
+  const handleNavigation = (direction) => {
+    handleProjectNavigation(direction);
+  };
+
   return (
     <div
       className={`${styles.myProjects} ${styles.scrollItem}`}
@@ -33,16 +42,20 @@ const ProjectDetails = ({ setContent, project }) => {
           </ul>
 
           <div className={styles.buttons}>
-            <Button
-              value="Demo"
-              externalRedirect={true}
-              href={project.urls.demo}
-            />
-            <Button
-              value="Code"
-              externalRedirect={true}
-              href={project.urls.code}
-            />
+            {project.urls.demo && (
+              <Button
+                value="Demo"
+                externalRedirect={true}
+                href={project.urls.demo}
+              />
+            )}
+            {project.urls.code && (
+              <Button
+                value="Code"
+                externalRedirect={true}
+                href={project.urls.code}
+              />
+            )}
           </div>
         </div>
         <div className={styles.imageContainer}>
@@ -61,14 +74,12 @@ const ProjectDetails = ({ setContent, project }) => {
       </div>
 
       <div className={styles.projectsNavigation}>
-        <div onClick={() => setContent("previous-projects")}>&lt;</div>
-        <div
-          onClick={() => {
-            // setContent("next-project");
-          }}
-        >
-          &gt;
-        </div>
+        <div onClick={() => handleNavigation("previous")}>&lt;</div>
+        {totalProjects - 1 === index ? (
+          <div className={styles.disabled}>&gt;</div>
+        ) : (
+          <div onClick={() => handleNavigation("next")}>&gt;</div>
+        )}
       </div>
     </div>
   );

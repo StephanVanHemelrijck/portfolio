@@ -10,6 +10,10 @@ import ProjectDetails from "./shared/ProjectDetails";
 const ProjectPage = () => {
   const spanRef = useRef(null);
   const [content, setContent] = useState("previous-projects");
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+  const [newSelectedProjectIndex, setNewSelectedProjectIndex] =
+    useState(selectedProjectIndex);
+  const [navigationDirection, setNavigationDirection] = useState(null);
 
   const handleMoveArrow = (e) => {
     if (e.type === "mouseenter") {
@@ -18,6 +22,34 @@ const ProjectPage = () => {
       spanRef.current.style.left = "0px";
     }
   };
+
+  const handleProjectNavigation = (direction) => {
+    console.log("moving to :", direction);
+
+    let moveBy = 0;
+    if (direction === "next") moveBy = +1;
+    if (direction === "previous") moveBy = -1;
+
+    setNewSelectedProjectIndex(selectedProjectIndex + moveBy);
+    setNavigationDirection(direction);
+  };
+
+  useEffect(() => {
+    // if index < 0 => go to previous project
+    if (newSelectedProjectIndex < 0 && navigationDirection === "previous") {
+      setContent("previous-projects");
+    }
+
+    // if index > length of projects => disable going to next project
+    if (
+      newSelectedProjectIndex > projects.length - 1 &&
+      navigationDirection === "next"
+    )
+      return;
+
+    // navigate to either next or previous project
+    setSelectedProjectIndex(newSelectedProjectIndex);
+  }, [newSelectedProjectIndex, navigationDirection]);
 
   const projects = [
     {
@@ -35,6 +67,54 @@ const ProjectPage = () => {
         code: "https://github.com/ehb-MCT/fp4-showcase",
       },
       image: "/images/finalwork-showcase.png",
+    },
+    {
+      category: "Web Application",
+      title: "Login - Prototype",
+      description:
+        "A prototype of a login page that can be used in web applications. Made for expert lab",
+      builtWith: [
+        { icon: "FaJs", color: "#F0DB4F" },
+        { icon: "FaNodeJs", color: "#61DBFB" },
+        { icon: "FaHtml5", color: "#E34F26" },
+      ],
+      urls: {
+        demo: "https://login-frontend-x06a.onrender.com/",
+        code: "https://github.com/StephanVanHemelrijck/prototype-login",
+      },
+      image: "/images/login.png",
+    },
+    {
+      category: "Web Application",
+      title: "File Upload - Prototype",
+      description:
+        "A prototype of a file upload page that can be used in web applications. Made for expert lab",
+      builtWith: [
+        { icon: "FaJs", color: "#F0DB4F" },
+        { icon: "FaNodeJs", color: "#61DBFB" },
+        { icon: "FaHtml5", color: "#E34F26" },
+      ],
+      urls: {
+        demo: "https://frontend-file-upload.onrender.com/",
+        code: "https://github.com/StephanVanHemelrijck/prototype-03-frontend",
+      },
+      image: "/images/file-upload.png",
+    },
+    {
+      category: "Web Application",
+      title: "Torfs Scraper",
+      description:
+        "A web scraper that scrapes the website of Torfs and displays the data on a plain website.",
+      builtWith: [
+        { icon: "FaJs", color: "#F0DB4F" },
+        { icon: "FaNodeJs", color: "#61DBFB" },
+        { icon: "FaHtml5", color: "#E34F26" },
+      ],
+      urls: {
+        demo: "https://streamable.com/3j4i3b",
+        code: "https://github.com/StephanVanHemelrijck/scraper",
+      },
+      image: "/images/torfs-scraper.png",
     },
   ];
 
@@ -56,7 +136,11 @@ const ProjectPage = () => {
               className={styles.redirect}
               onMouseEnter={(e) => handleMoveArrow(e)}
               onMouseLeave={(e) => handleMoveArrow(e)}
-              onClick={() => setContent("my-projects")}
+              onClick={() => {
+                setContent("my-projects");
+                setSelectedProjectIndex(0);
+                setNewSelectedProjectIndex(0);
+              }}
             >
               See Projects <span ref={spanRef}>&gt;</span>
             </p>
@@ -64,7 +148,12 @@ const ProjectPage = () => {
         )}
 
         {content === "my-projects" && (
-          <ProjectDetails setContent={setContent} project={projects[0]} />
+          <ProjectDetails
+            project={projects[selectedProjectIndex]}
+            totalProjects={projects.length}
+            handleProjectNavigation={handleProjectNavigation}
+            index={selectedProjectIndex}
+          />
         )}
       </div>
     </section>

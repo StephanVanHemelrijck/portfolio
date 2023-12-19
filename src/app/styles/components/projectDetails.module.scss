@@ -107,13 +107,13 @@
       color: $primaryAccentColor;
     }
   }
+}
 
-  div:nth-child(2) {
-    opacity: 0.5;
+.disabled {
+  opacity: 0.5;
 
-    &:hover {
-      cursor: not-allowed;
-      color: $neutralLight;
-    }
+  &:hover {
+    cursor: not-allowed;
+    color: $neutralLight;
   }
 }
