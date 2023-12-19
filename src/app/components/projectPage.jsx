@@ -24,8 +24,6 @@ const ProjectPage = () => {
   };
 
   const handleProjectNavigation = (direction) => {
-    console.log("moving to :", direction);
-
     let moveBy = 0;
     if (direction === "next") moveBy = +1;
     if (direction === "previous") moveBy = -1;
@@ -59,7 +57,7 @@ const ProjectPage = () => {
         "A web application that allows students of Erasmushogeschool Brussels to showcase their final work.",
       builtWith: [
         { icon: "FaJs", color: "#F0DB4F" },
-        { icon: "FaNodeJs", color: "#61DBFB" },
+        { icon: "FaNodeJs", color: "#3C873A" },
         { icon: "FaHtml5", color: "#E34F26" },
       ],
       urls: {
@@ -75,8 +73,9 @@ const ProjectPage = () => {
         "A prototype of a login page that can be used in web applications. Made for expert lab",
       builtWith: [
         { icon: "FaJs", color: "#F0DB4F" },
-        { icon: "FaNodeJs", color: "#61DBFB" },
-        { icon: "FaHtml5", color: "#E34F26" },
+        { icon: "FaAngular", color: "#DD0031" },
+        { icon: "FaSass", color: "#CD6799" },
+        { icon: "FaNodeJs", color: "#3C873A" },
       ],
       urls: {
         demo: "https://login-frontend-x06a.onrender.com/",
@@ -90,8 +89,8 @@ const ProjectPage = () => {
       description:
         "A prototype of a file upload page that can be used in web applications. Made for expert lab",
       builtWith: [
-        { icon: "FaJs", color: "#F0DB4F" },
-        { icon: "FaNodeJs", color: "#61DBFB" },
+        { icon: "FaReact", color: "#61DBFB" },
+        { icon: "FaNodeJs", color: "#3C873A" },
         { icon: "FaHtml5", color: "#E34F26" },
       ],
       urls: {
@@ -107,7 +106,7 @@ const ProjectPage = () => {
         "A web scraper that scrapes the website of Torfs and displays the data on a plain website.",
       builtWith: [
         { icon: "FaJs", color: "#F0DB4F" },
-        { icon: "FaNodeJs", color: "#61DBFB" },
+        { icon: "FaNodeJs", color: "#3C873A" },
         { icon: "FaHtml5", color: "#E34F26" },
       ],
       urls: {
